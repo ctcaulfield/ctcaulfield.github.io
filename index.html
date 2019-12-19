@@ -12,6 +12,28 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.plyr.io/3.3.22/plyr.css">
 
+        <!--FS Viewer-->
+        <script>
+          window['_fs_debug'] = false;
+          window['_fs_host'] = 'fullstory.com';
+          window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+          window['_fs_org'] = 'QPY0N';
+          window['_fs_namespace'] = 'FS';
+          (function(m,n,e,t,l,o,g,y){
+              if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+              g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+              o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
+              y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+              g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+              g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+              g.log = function(a,b) { g("log", [a,b]) };
+              g.consent=function(a){g("consent",!arguments.length||a)};
+              g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+              g.clearUserCookie=function(){};
+          })(window,document,window['_fs_namespace'],'script','user');
+        </script>
+        <!--End of FS Viewer-->
+
         <title>Christopher Caulfield</title>
 
         <!--GA-->
@@ -41,7 +63,6 @@
                         <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="story.html">My Story</a>
                         <a class="nav-item nav-link" href="media.html">Media</a>
-                        <a class="nav-item nav-link" href="caulfield_resume.pdf" target="_blank">Resume</a>
                     </div>
                 </div>
             </nav>
@@ -85,9 +106,9 @@
 
         <section id="descripton" class="section descripton">
             <div class="container" style="text-align: center">
-                <div class="row"> 
+                <div class="row">
                     <div class="col-lg-12">
-                        <p>Currently, I am a second-year Graduate student at Cornell Tech in NYC, pursuing a Dual Masters Degree in Information Systems and Connective Media. Previously, I received my Bachelors in Web and Mobile Computing, with a focus on Human Computer Interaction. I have had the opportunity to work on exciting products with Pandora, Amazon, Google Accessibility, and Hudl. Furthermore, I am passionate about researching and developing assistive technology for people with <span class="strikeout">dis</span>abilities. <a href="https://a11yproject.com/" target="_blank">#A11Y</a>.</p>  
+                        <p>Currently, I am a second-year Graduate student at Cornell Tech in NYC, pursuing a Dual Masters Degree in Information Systems and Connective Media. Previously, I received my Bachelors in Web and Mobile Computing, with a focus on Human Computer Interaction. I have had the opportunity to work on exciting products with Pandora, Amazon, Google Accessibility, and Hudl. Furthermore, I am passionate about researching and developing assistive technology for people with <span class="strikeout">dis</span>abilities. <a href="https://a11yproject.com/" target="_blank">#A11Y</a>.</p>
                         <br>
                         <a href="story.html" class="btn btn-large">My Full Story</a>
                     </div>
@@ -108,7 +129,7 @@
                                 </div>
                             </div>
                             <!-- overlay -->
-                            </a> 
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="#reportallModal" data-toggle="modal" class="work-box"> <img src="images/reportall.png" alt="">
                             <div class="overlay">
@@ -118,7 +139,7 @@
                                 </div>
                             </div>
                             <!-- overlay -->
-                            </a> 
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="#amazonModal" data-toggle="modal" class="work-box"> <img src="images/amazon.png" alt="">
                             <div class="overlay">
@@ -128,7 +149,7 @@
                                 </div>
                             </div>
                             <!-- overlay -->
-                            </a> 
+                            </a>
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="#beanModal" data-toggle="modal" class="work-box"> <img src="images/bean_cover.png" alt="">
@@ -164,7 +185,7 @@
                     <!-- contact me section -->
                     <section id="hireme" class="section hireme">
                         <div class="container">
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="col-lg-12">
                                     <h3>Want to ask a question or get some coffee?</h3>
                                     <p>Don't hesitate to reach out!</p>
@@ -194,7 +215,7 @@
                     <!-- footer -->
 
                     <!--::::::::ALL MODALS START::::::::-->
-                    
+
                     <!--REPORTALL MODAL START-->
                     <div class="modal fade" id="reportallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                         <div class="modal-dialog modal-full">
@@ -207,7 +228,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container content_container">
-                                        <div class="row"> 
+                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="page-header">
                                                     <h3>Overview</h3>
@@ -215,7 +236,7 @@
                                                 <p>
                                                     ReportAll is a templated reporting app for collaborative/crowdsourced journalism with a goal to engage trusted community members in local reporting. This allows news reporters to get the information they need from trusted members in their local communities, even if they can’t be on the scene. This will be a supplement to current reporting standards.
                                                 </p>
-                                                
+
                                                 <div class="page-header">
                                                     <h3>Tech Stack</h3>
                                                 </div>
@@ -227,7 +248,7 @@
 
                                                 <div class="page-header">
                                                     <h3>Demo</h3>
-                                                </div>                                            
+                                                </div>
 
                                                 <div class="plyr__video-embed" id="player">
                                                     <iframe src="https://www.youtube.com/embed/Dn7yxvUSz44?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
@@ -235,7 +256,7 @@
                                                 <br>
                                                 <div class="page-header">
                                                     <h3>Source Code</h3>
-                                                </div>   
+                                                </div>
                                                 <ul>
                                                     <li>GitHub Repo: <a href="https://github.com/ctcaulfield/reportall">here</a></li>
                                                 </ul>
@@ -261,7 +282,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container content_container">
-                                        <div class="row"> 
+                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="page-header">
                                                     <h3>Overview</h3>
@@ -269,7 +290,7 @@
                                                 <p>
                                                     PicSpot was a partnered project between Cornell Tech and Amazon. PicSpot is a mobile app that filters through a users photo library to help find the photos worth sharing with families, friends, and on social media. View the demo below for more detail!
                                                 </p>
-                                                
+
                                                 <div class="page-header">
                                                     <h3>Tech Stack</h3>
                                                 </div>
@@ -281,7 +302,7 @@
 
                                                 <div class="page-header">
                                                     <h3>Final Presentation + Demo</h3>
-                                                </div>                                            
+                                                </div>
 
                                                 <div class="plyr__video-embed" id="player">
                                                     <iframe src="https://www.youtube.com/embed/wvYJ7W9d9VA?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
@@ -289,7 +310,7 @@
                                                 <br>
                                                 <div class="page-header">
                                                     <h3>Source Code</h3>
-                                                </div>   
+                                                </div>
                                                 <ul>
                                                     <li>GitHub Repo: <a href="https://github.com/ctcaulfield/picspot">here</a></li>
                                                 </ul>
@@ -304,7 +325,7 @@
                         </div>
                     </div>
                     <!--END AMAZON MODAL-->
-                    
+
                     <div class="modal fade" id="beanModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                         <div class="modal-dialog modal-full">
                             <div class="modal-content">
@@ -316,18 +337,18 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container content_container">
-                                        <div class="row"> 
+                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="page-header">
                                                     <h3>Overview</h3>
                                                 </div>
                                                 <p>
-                                                    Unfortunately, as a deaf individual, many of the hotels, apartments, or dorms I have lived in are not accessible. I have experienced countless times where someone will knock on my main door and I cannot hear it. This frequent issue motivated me to create a "door assistant" prototype, of what could be a potential solution to ensure residents with hearing loss can hear someone knocking on their door.           
+                                                    Unfortunately, as a deaf individual, many of the hotels, apartments, or dorms I have lived in are not accessible. I have experienced countless times where someone will knock on my main door and I cannot hear it. This frequent issue motivated me to create a "door assistant" prototype, of what could be a potential solution to ensure residents with hearing loss can hear someone knocking on their door.
                                                 </p>
 
                                                 <div class="page-header">
                                                     <h3>Demo</h3>
-                                                </div>                                            
+                                                </div>
 
                                                 <div class="plyr__video-embed" id="player">
                                                     <iframe src="https://www.youtube.com/embed/Ntg9ShkIayo?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
@@ -345,7 +366,7 @@
                                                 </ul>
                                                 <div class="page-header">
                                                     <h3>Source Code</h3>
-                                                </div>   
+                                                </div>
                                                 <p>If you are interested in creating this as well, I have provided all the source code on my GitHub! Please reach out to me if you have any questions!</p>
                                                 <ul>
                                                     <li>GitHub Repo: <a href="https://github.com/ctcaulfield/door_assistant">here</a></li>
@@ -374,7 +395,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container content_container">
-                                        <div class="row"> 
+                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="page-header">
                                                     <h3>Overview</h3>
@@ -385,10 +406,10 @@
                                                     <h3>Overview</h3>
                                                 </div>
                                                 <p>
-                                                    Automatic Speech Recognition (ASR) has been proven to be a useful tool to enable users to utilize their speech in text form on their device. It is used in many situations such as watching videos on YouTube where automatic captions generated or asking Siri on an iPhone to find the closest coffee shop. In the Center for Accessibility and Inclusion Research at Rochester Institute of Technology, I researched how ASR software could assist deaf students in the classroom, specifically when working with hearing students. 
+                                                    Automatic Speech Recognition (ASR) has been proven to be a useful tool to enable users to utilize their speech in text form on their device. It is used in many situations such as watching videos on YouTube where automatic captions generated or asking Siri on an iPhone to find the closest coffee shop. In the Center for Accessibility and Inclusion Research at Rochester Institute of Technology, I researched how ASR software could assist deaf students in the classroom, specifically when working with hearing students.
                                                 </p>
                                                 <p>
-                                                    One frequent issue with ASR is the inaccuracy of text output (see image above for example!). This technical issue was the focus of my research and how ASR could still be accessible to deaf students despite this constraint.  
+                                                    One frequent issue with ASR is the inaccuracy of text output (see image above for example!). This technical issue was the focus of my research and how ASR could still be accessible to deaf students despite this constraint.
                                                 </p>
                                                 <p>
                                                     If you are interested in reading about my research in full, please view my successful publications below!
@@ -411,7 +432,7 @@
                                                 <p>
                                                     Larwan Berke, ​<span style="font-weight:bold">Christopher Caulfield</span>,​ and Matthew Huenerfauth. <span style="font-style: italic">Annual SIGACCESS Conference on Computers and Accessibility (ASSETS'17)</span>
                                                 </p>
-                                                <p>Publication available: <a href="https://dl.acm.org/citation.cfm?id=3132541">here</a></p>  
+                                                <p>Publication available: <a href="https://dl.acm.org/citation.cfm?id=3132541">here</a></p>
                                             </div>
 
                                         </div>  <!-- row  -->
@@ -438,7 +459,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container content_container">
-                                        <div class="row"> 
+                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="page-header">
                                                     <h3>Overview</h3>
@@ -459,7 +480,7 @@
                                                     To create the best possible solution, I interviewed several families, about their experiences with the app and current pain points to identify potential requirements. These requirements formulated from the interviews were used to generate "User Stories" for the low and high fidelity prototype. After iterating and validating the prototypes through usability testing, it was handed off to the development team for implementation.
                                                 </p>
                                                 <p>
-                                                    Below are some example screenshots of the profiling system integration into the Woozy app. 
+                                                    Below are some example screenshots of the profiling system integration into the Woozy app.
                                                 </p>
                                                 <div class="page-header">
                                                     <h3>High Fidelity Prototype</h3>
@@ -481,7 +502,7 @@
                                                     <li>Android: <a href="https://play.google.com/store/apps/details?id=com.metrostarsystems.woozy&hl=en_US">here</a></li>
                                                 </ul>
 
-                                            </div>    
+                                            </div>
                                         </div>
                                     </div> <!-- content container  -->
                                     <div class="modal-footer">
